@@ -11,12 +11,16 @@ import BlogsThreeColum2 from "../components/Blogs-three-column2";
 import DarkTheme from "../layouts/Dark";
 import ContactSection from "../components/Contact-section";
 import ClientsBrands from "../components/Clients-brands";
+import { useRouter } from 'next/router'
 
 const Homepage2 = () => {
+  const router = useRouter();
+
   const navbarRef = React.useRef(null);
   const logoRef = React.useRef(null);
 
   React.useEffect(() => {
+    router.push('https://emersoneho.notion.site/emersoneho/Resume-5e60c934a9ea49b0b4369a3c701210f2');
     var navbar = navbarRef.current;
     if (window.pageYOffset > 300) {
       navbar.classList.add("nav-scroll");
